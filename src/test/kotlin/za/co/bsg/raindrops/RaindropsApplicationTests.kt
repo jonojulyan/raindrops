@@ -8,6 +8,7 @@ class RaindropsApplicationTests {
 
 	@Test
 	fun contextLoads() {
+		assert(true)
 	}
 
 }
