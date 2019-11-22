@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:sqlserver://database-1.c4rtmve0utkd.us-east-1.rds.amazonaws.com:1433"
+    url: "jdbc:sqlserver://database-1.c4rtmve0utkd.us-east-1.rds.amazonaws.com:1433;database=4Matt"
     username: "admin"
     password: "Welcome2BSG"
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
