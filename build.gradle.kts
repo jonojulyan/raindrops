@@ -34,7 +34,7 @@ dependencies {
     implementation(group = "org.slf4j", name = "log4j-over-slf4j", version = "1.7.29")
     implementation(group = "ch.qos.logback", name = "logback-classic", version = "1.2.3")
     implementation(group = "ch.qos.logback", name = "logback-core", version = "1.2.3")
-    implementation(group = "com.fasterxml.jackson.dataformat", name = "jackson-dataformat-xml", version = "2.10.1")
+    implementation(group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version = "2.9.7")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }

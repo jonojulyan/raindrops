@@ -1,19 +1,20 @@
 package za.co.bsg.raindrops.model.dto
 
-import javax.xml.bind.annotation.XmlElement
-import javax.xml.bind.annotation.XmlRootElement
+import com.fasterxml.jackson.annotation.JsonInclude
+import com.fasterxml.jackson.annotation.JsonProperty
 
-@XmlRootElement(name = "person")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 data class PersonalInfoDTO @JvmOverloads constructor(
-        @XmlElement(name = "username") val username: String,
-        val employeeId: String,
-        val alternateEmployeeId: String,
-        val profilePic: String,
-        val title: String,
-        val suffix: String,
-        val firstName: String,
-        val lastName: String,
-        val fullName: String,
-        val gender: String,
-        val mobileNumber: String
+        @JsonProperty(value = "id") val id: Long,
+        @JsonProperty(value = "username") val username: String,
+        @JsonProperty(value = "employeeId") val employeeId: String,
+        @JsonProperty(value = "alternateEmployeeId") val alternateEmployeeId: String,
+        @JsonProperty(value = "profilePic") val profilePic: String,
+        @JsonProperty(value = "title") val title: String,
+        @JsonProperty(value = "suffix") val suffix: String,
+        @JsonProperty(value = "firstName") val firstName: String,
+        @JsonProperty(value = "lastName") val lastName: String,
+        @JsonProperty(value = "fullName") val fullName: String,
+        @JsonProperty(value = "gender") val gender: String,
+        @JsonProperty(value = "mobileNumber") val mobileNumber: String
 )

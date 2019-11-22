@@ -1,4 +1,14 @@
 spring:
+  datasource:
+    url: "jdbc:sqlserver://localhost;databaseName=springbootdb"
+    username: "raindrops"
+    password: "5uper$ecureP@ssword"
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      dialect: org.hibernate.dialect.SQLServer2012Dialect
   h2:
     console:
       enabled: true

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import za.co.bsg.raindrops.model.dao.PersonalInfoDAO
-import za.co.bsg.raindrops.repository.StagedPersonalInfoRepository
+import za.co.bsg.raindrops.repository.PersonalInfoRepository
 
 @SpringBootTest
-internal class PersistenceIntegrationTest(@Autowired val stagedPersonalInfoRepository: StagedPersonalInfoRepository) {
+internal class PersistenceIntegrationTest(@Autowired val personalInfoRepository: PersonalInfoRepository) {
 
     @Test
     fun givenStagedPersonalInfo_whenSaved_thenFound() {
@@ -15,8 +15,8 @@ internal class PersistenceIntegrationTest(@Autowired val stagedPersonalInfoRepos
                 "https://robohash.org/sedteneturnumquam.bmp?size=50x50&amp;set=set1", "Honorable",
                 "Jr", "Lorilyn", "March", "Lorilyn March", "Female",
                 "+55 502 816 2475")
-        stagedPersonalInfoRepository.save(personalInfoToSave)
-        val personalInfoFound = stagedPersonalInfoRepository.getStagedPersonalInfoByUsername(personalInfoToSave.username)
+        personalInfoRepository.save(personalInfoToSave)
+        val personalInfoFound = personalInfoRepository.getPersonalInfoByUsername(personalInfoToSave.username)
         assert(personalInfoToSave == personalInfoFound)
     }
 }
