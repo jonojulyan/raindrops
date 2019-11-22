@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: "jdbc:sqlserver://BSGNTB0615:1433;databaseName=Raindrops"
-    username: "raindrops"
-    password: "5uper$ecureP@ssword"
+    url: "jdbc:sqlserver://database-1.c4rtmve0utkd.us-east-1.rds.amazonaws.com:1433"
+    username: "admin"
+    password: "Welcome2BSG"
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     show-sql: true
