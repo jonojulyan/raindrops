@@ -30,6 +30,7 @@ dependencies {
     implementation(group = "org.jetbrains.kotlin", name = "kotlin-allopen")
     implementation(group = "org.jetbrains.kotlin", name = "kotlin-maven-noarg")
     implementation(group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8")
+    implementation(group = "com.microsoft.sqlserver", name = "mssql-jdbc", version = "7.4.1.jre8")
     implementation(group = "org.slf4j", name = "slf4j-api", version = "1.7.29")
     implementation(group = "org.slf4j", name = "log4j-over-slf4j", version = "1.7.29")
     implementation(group = "ch.qos.logback", name = "logback-classic", version = "1.2.3")

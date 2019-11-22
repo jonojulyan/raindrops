@@ -5,6 +5,4 @@ import za.co.bsg.raindrops.model.dao.PersonalInfoDAO
 
 interface PersonalInfoRepository : JpaRepository<PersonalInfoDAO, Long> {
     fun getPersonalInfoByUsername(username: String): PersonalInfoDAO?
-
-    fun getAll(): List<PersonalInfoDAO>?
 }

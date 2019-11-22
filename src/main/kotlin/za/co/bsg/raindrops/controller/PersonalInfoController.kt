@@ -34,7 +34,7 @@ class PersonalInfoController @Autowired constructor(
     @GetMapping("/{username}")
     fun getByUsername(@PathVariable(value = "username") username: String): ResponseEntity<PersonalInfoDTO> {
         logger.debug("Endpoint hit to return PersonalInfo object with username: {}", username)
-        return ResponseEntity(personalInfoService.getPersonalInfoByUsername(username), HttpStatus.OK)
+        return ResponseEntity(personalInfoService.getPersonalInfo(username), HttpStatus.OK)
     }
 
     @GetMapping("/")

@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import za.co.bsg.raindrops.api.PersonalInfoApiClient
-import za.co.bsg.raindrops.model.PersonalInfoMapper
+import za.co.bsg.raindrops.model.mapper.PersonalInfoMapper
 import za.co.bsg.raindrops.model.dto.PersonalInfoDTO
 import za.co.bsg.raindrops.repository.PersonalInfoRepository
 
@@ -31,13 +31,13 @@ class PersonalInfoService @Autowired constructor(
         }
     }
 
-    fun getPersonalInfoByUsername(username: String): PersonalInfoDTO? {
+    fun getPersonalInfo(username: String): PersonalInfoDTO? {
         logger.debug("Attempting to retrieve PersonalInfo with username - {} from data store", username)
         return personalInfoRepository.getPersonalInfoByUsername(username)?.let { personalInfoMapper.toDTO(it) }
     }
 
     fun getAllPersonalInfo(): List<PersonalInfoDTO>? {
         logger.debug("Attempting to retrieve all PersonalInfo objects from data store")
-        return personalInfoRepository.getAll()?.let { personalInfoMapper.toDTO(it) }
+        return personalInfoMapper.toDTO(personalInfoRepository.findAll())
     }
 }

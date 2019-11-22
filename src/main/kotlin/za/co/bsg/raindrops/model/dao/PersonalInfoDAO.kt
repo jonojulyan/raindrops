@@ -1,10 +1,9 @@
 package za.co.bsg.raindrops.model.dao
 
-import za.co.bsg.raindrops.model.dao.Persistable
 import javax.persistence.Entity
 
-@Entity
-data class PersonalInfoDAO @JvmOverloads constructor (
+@Entity(name = "PersonalInfo")
+data class PersonalInfoDAO constructor(
         val username: String,
         val employeeId: String,
         val alternateEmployeeId: String,

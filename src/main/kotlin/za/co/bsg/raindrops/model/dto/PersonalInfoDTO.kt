@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-data class PersonalInfoDTO @JvmOverloads constructor(
+data class PersonalInfoDTO constructor(
         @JsonProperty(value = "id") val id: Long,
         @JsonProperty(value = "username") val username: String,
         @JsonProperty(value = "employeeId") val employeeId: String,

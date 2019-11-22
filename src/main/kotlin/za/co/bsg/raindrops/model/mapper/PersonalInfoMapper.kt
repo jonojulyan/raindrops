@@ -1,4 +1,4 @@
-package za.co.bsg.raindrops.model
+package za.co.bsg.raindrops.model.mapper
 
 import org.springframework.stereotype.Component
 import za.co.bsg.raindrops.model.dao.PersonalInfoDAO
