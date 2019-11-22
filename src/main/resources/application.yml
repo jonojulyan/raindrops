@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:sqlserver://localhost;databaseName=Raindrops"
+    url: "jdbc:sqlserver://BSGNTB0615:1433;databaseName=Raindrops"
     username: "raindrops"
     password: "5uper$ecureP@ssword"
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
